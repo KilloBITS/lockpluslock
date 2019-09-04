@@ -1,0 +1,203 @@
+@font-face {
+  font-family: DefaultFont; /* Имя шрифта */
+  src: url(./fonts/17546.ttf); /* Путь к файлу со шрифтом */
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #d7d7f1;
+  font-family: DefaultFont;
+  background-image: url(../images/background.jpg);
+}
+
+#root{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.look_look{
+  width: 800px;
+  background-color: #f97a69;
+  margin: auto;
+  height: 600px;
+  top: calc(50% - 300px);
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e9e9e9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  background-image: url(../images/3px-tile.png);
+}
+
+.inline{
+  display: inline-block;
+  float: left;
+  position: relative;
+}
+
+.box.game{
+  width: 590px;
+  height: 590px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.box.panel{
+  width: 190px;
+  height: 590px;
+  margin: 5px 5px 5px 0;
+  border-radius: 5px;
+}
+
+.panelBox{
+  width: 100%;
+  margin: 10px 0;
+}
+
+.panelBoxTitle{
+  text-transform: uppercase;
+  text-align: center;
+  color: #40226a;
+  letter-spacing: 6px;
+  font-size: 28px;
+}
+
+.setLevel{
+  display: inline-block;
+  width: calc(100% / 3 - 4px);
+  text-align: center;
+  background-color: #b0b0e1;
+  height: 40px;
+  line-height: 40px;
+  color: white;
+  margin: 2px;
+  border-radius: 3px;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button{
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 7px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-decoration:none;
+  transition: .3s;
+}
+
+.startButton {
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	text-shadow:0px 1px 0px #ffee66;
+	background-color:#ffec64;
+  background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	border:1px solid #ffaa22;
+	color:#333333;
+  margin: 10px 0;
+}
+
+.startButton:hover {
+	background: linear-gradient(to bottom, #e3d14e 5%, #cf850f 100%);
+	background-color:#ffab23;
+}
+
+.startButton:active {
+	position:relative;
+	top:1px;
+}
+
+.stopButton {
+  box-shadow: 0px 1px 0px 0px #ffafaf;
+	text-shadow:0px 1px 0px #ff6666;
+  background-color: #ffec64;
+  background: linear-gradient(to bottom, #ff6464 5%, #ff2323 100%);
+  border: 1px solid #ff2222;
+  color: #333333;
+  margin: 10px 0;
+}
+
+.stopButton:hover {
+	background: linear-gradient(to bottom, #e3d14e 5%, #cf850f 100%);
+	background-color:#ffab23;
+}
+
+.stopButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+.look_box{
+  display: inline-block;
+  margin: 3.5px;
+  text-align: center;
+  background-color: #ffb9c3;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  transition: .2s;
+}
+
+.childBox{
+  position: absolute;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  left: 50%;
+  top: 50%;
+  transition: .3s;
+  transform: translate(-50%, -50%) rotateY(0);
+  transform-style: preserve-3d;
+  border-radius: 5px;
+  background-image: url(../images/default.jpg);
+  background-size: contain;
+}
+
+.look_box:hover .childBox{
+
+}
+
+.look_box:hover{
+  background-color: #75531f;
+}
+
+.childBox.good{
+  background-color: #ffbad0;
+}
+
+.select{
+  transform: translate(-50%, -50%) rotateY(180deg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffbad0;
+}
+
+.noneGame{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffbcc3;
+}
+
+.noneGameBigTitle{
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  padding: 10px 0;
+  font-size: 30px;
+  color: #b84b3c;
+}
+
+.noneGameText{
+  text-align: center;
+  color: #ff4646;
+  margin-bottom: 10px;
+}
